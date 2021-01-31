@@ -1364,7 +1364,7 @@
           f = {
             async eval(e) {
               if (((self.precision = 2), !l)) {
-                let e = await fetch("/rates.json");
+                let e = await fetch("./rates.json");
                 (c = await e.json()), (l = !0);
               }
               let t = (e = e.replace(/\u200B/g, "")).split("\n"),
