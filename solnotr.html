@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link type="text/css" rel="stylesheet" id="dark-mode-general-link" />
+  <link type="text/css" rel="stylesheet" id="dark-mode-custom-link" />
+  <style lang="en" type="text/css" id="dark-mode-custom-style"></style>
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Solnotr</title>
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Calculator for the Web, which crunches numbers within your text"
+    />
+    <meta
+      name="keywords"
+      content="math notepad, calculator, online calculator, web calculator, currency calculator, quick calculator, quick note"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./apple-touch-icon.png"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon.ico" />
+    <!-- 
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png"> -->
+    <!-- <link rel="manifest" href="./site.webmanifest"> -->
+    <!-- <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#0084ff"> -->
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="prefetch" href="./rates.json" />
+    <link href="./src/styles.css" rel="stylesheet" />
+  </head>
+
+  <body class="preview">
+    <main id="hero">
+      <img
+        class="logo"
+        src="./src/solnotr-logo.png"
+        alt="Solnotr Logo"
+        width="130"
+        height="130"
+      />
+      <h1>Solnotr</h1>
+      <p class="desc">An elegant calculator for the Web</p>
+      <a
+        id="cr-nw"
+        class="button new"
+        href="#MQAgogHghgtgDgGwKYGcBQaAUASAjABnwGsQBqEAFnwFIBKEAehACY0QBtdgWlwF1eQIAJYA7EACEAKgGEQmAMoALIQDMALqTAi1SAE4g1AexABjQ3ACeBxUhBQRKAO56DxqCBFJHIBKKS0MIA=="
+        >Create new note</a
+      >
+      <h2>What is <strong>Solnotr</strong>?</h2>
+      <p>
+        <strong>Solnotr</strong> is a simple calculator, . You can use notes
+        with numbers alongside each other. And all your numbers are instantly
+        calculated as you type. It is also a currency calculator.
+      </p>
+    </main>
+    <div class="app">
+      <div
+        id="editor"
+        data-gramm_editor="false"
+        contenteditable="plaintext-only"
+        spellcheck="false"
+        style="
+          outline: none;
+          overflow-wrap: break-word;
+          overflow-y: auto;
+          resize: vertical;
+          white-space: pre-wrap;
+        "
+      ></div>
+      <div id="output">
+        <div>&nbsp;</div>
+      </div>
+    </div>
+    <footer></footer>
+    <button id="button">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <circle cx="12" cy="12" r="1"></circle>
+        <circle cx="12" cy="5" r="1"></circle>
+        <circle cx="12" cy="19" r="1"></circle>
+      </svg>
+    </button>
+    <div id="menu">
+      <a class="item" id="create-new" href="#new">New note</a>
+      <a class="item" id="share-doc">Share</a>
+      <a class="item" id="about" href="#">About</a>
+      <a
+        class="item"
+        id="documentation"
+        href="#MQAgIg9gxgrgtgUwHYBcCGKCWEkChcDKEANkhCgE4iYDOIaIKCAHiiAgCaYoRUBmvEAHdeAa0xIA5iAgw2ABwoQARsQRw6KABYZqSAG4l9CEFDTFYxDNiQ0AdPgBMIAFQhHuAIyOADCADUIAAsngCk+ACqNCYiFBx0aEowSBwgAJ6yVGYWMFZYODQANCA0EIw6bNoIacKYxMQgcGiiJtG2JnkIFA64ACSOviACVFhQLSh0gb0ArABsQ4IM6MyY+LigAHLwyl34nqJeID7HR8dehcc+F2eeALJroADy8l0YvDT4gWgpIAC0uG5vqkAPT4W4QDi5GB0fSYBjeEChECeHy4ACizHkOGQbFhDGcAD0QABmfAABS6UBxaEkJjQHC4+SQyJOgUc03CFIoVNQNNaMGUlDQUCZLL8v3cHNwXJ56FppnMlmsOElSIgfDFDxAAGEYBQKMgoJgEB9CCQyJQFcyOGUmtpavbiOQ6OrTHqDUgjSa7Dr3YaaiwoDopCYKBgTfQDSAYPIOOHUghjBQaighDianAJHJvSBItE3fr/SU0nBlCQ6AAKXrFQA1BMVAL0ExQAxcUAKXFQCVBABKGRUACSBEepghJoAXPheii/IFpj40REAEq4XzagCCYD0IAiBDA+FXxFKJQgiFMyfkPFghc9xpoo5AAC0AOoAGWKYFXfeK27AABUvzvtWKAAhH9AJAIDtQACWKNEf2gkBn1A4oAEUfwiW430eABxNFgI2ICYMeAhikg79invNEwMfVcADU0WI8BVwISC9hAQUoE3aEOD3A8IGKUoT0vD0vToMxmR2EADT4LoDVSZQUy0EwkDQRBxy8Y5RBAG16kSOgJDY7goAgCRTXWEAFwQaThIjfAiFIcgqBoGMsQoCZJMsrpDQkaRsiVUUDSc4gJh9bViEwMYZGZKoQCQBBOE4ehbDTEYyhMro2AYMKkFEYpBEUE06AILRMD4FB/DRVAukYMp5DkcoTCEnF3MCtgVWi2LWBALKEB6Kctx3XAQCGwIp0G4bVS1H9yHMOgADISngWzzQcq0FrgJoKEwAAvUMTVyNz5OjGhvJAAB9Hh0GIU7ezOpy4GuiAXjDHgKHsHVFVyZVbEjEwbVi6N5Gq+gYoQRITTYRT6S6HpbjqTTelJNFJEkOh+kIGBJESEBJ1wAAxJ09Wx6ZcCmy6tQAKTQfQ0AIKBNvPfA0Wp4gYHDRKakp6nafptgWHymhjpwH0yQCugfzQZQbpQNIXhAAAiAArGg5Z6ABIW4MC0OxjqQCshq7FwXGcQINe0OwjJoPWQANo29x+aFdr4TQIDKRwgl+TwtSKxJvPwcnoTYGgdCjaLGtQLqJBym7+boW5kBgP4AD4QG9g0eiAA"
+        >Documentation</a
+      >
+      <a
+        class="item"
+        id="bug-report"
+        href="mailto:kishor4u@gmail.com?subject=Solnotr%20Bug%20Report"
+        >Bug report</a
+      >
+    </div>
+    <div id="notification"></div>
+    <div class="prober" style="width: 450px">1</div>
+    <script src="./src/main.js"></script>
+  </body>
+</html>
